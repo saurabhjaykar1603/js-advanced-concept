@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+        }
+
+        .btn {
+            margin-top: 100px;
+            background-color: violet;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 9px 1px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" id="button" onclick="SayHello() " onmouseover="onMouseover()" onmouseout="onMouseout()"> Say
+        hello</button>
+
+    <button class="btn" ondblclick="SayHello()"> Say hello</button>
+
+    <script>
+        function SayHello() {
+            alert("Hello Saurabh !")
+        }
+    </script>
+
+    <script>
+        //  onmouseover 
+        function onMouseover() {
+            const change = document.getElementById("button")
+            change.style.backgroundColor = "red";
+
+        }
+        // onmouseout 
+        function onMouseout() {
+            const change = document.getElementById("button")
+            change.style.backgroundColor = "green";
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 100px;
+            align-items: center;
+
+
+        }
+
+        .box img {
+            height: 230px;
+        }
+
+        .box button {
+            margin-top: 60px;
+            padding: 10px 20px;
+            font-size: 30px;
+            background-color: burlywood;
+            border: none;
+            border-radius: 7px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="./helicopter.png" alt="" id="heli">
+        </div>
+        <div class="box">
+            <button type="button" onclick="helicopterFly()">Quick Fly</button>
+            <button type="button" onclick="helicopterLand()" style="margin-left: 15px;">Quick Land</button>
+        </div>
+    </div>
+
+    <script>
+
+        const heliElement = document.getElementById('heli');
+        function helicopterFly() {
+            heliElement.src = "helicopter.gif";
+            console.log("fly")
+        }
+        function helicopterLand() {
+            heliElement.src = "helicopter.png";
+            console.log("land")
+
+
+        }
+    </script>
+</body>
+
+</html>

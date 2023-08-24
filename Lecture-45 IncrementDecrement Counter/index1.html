@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .card-img {
+            display: block;
+            margin: 10px auto;
+
+        }
+
+        .card-heading {
+            text-align: center;
+        }
+
+        .quantity-btn-container {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="pizza.png" alt="" height="70px" class="card-img">
+        <h1 class="card-heading">Paneer Onion Pizza</h1>
+
+        <div class="quantity-btn-container">
+            <button type="button" onclick="decrement()">
+                -
+            </button>
+            <span id="quantity">1</span>
+            <button type="button" onclick="increment()">
+                +
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function increment() {
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity + 1;
+        }
+
+
+        function decrement() {
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity - 1;
+        }
+
+    </script>
+</body>
+
+</html>

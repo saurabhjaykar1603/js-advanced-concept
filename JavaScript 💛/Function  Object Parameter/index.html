@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // You define a function named myFunc that takes an object called theObject as a parameter.
+        function myFunc(theObject) {
+            // Inside the myFunc function, you're modifying the make property of the theObject parameter and changing its value to "Toyota".
+            theObject.make = "Toyota";
+        }
+
+        const mycar = {
+            make: "Honda",
+            model: "Accord",
+            year: 1998,
+        };
+
+        console.log(mycar.make); // "Honda"
+        myFunc(mycar);
+        console.log(mycar.make); // "Toyota"
+
+    </script>
+</body>
+
+</html>

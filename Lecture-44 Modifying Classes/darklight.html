@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>dark light mode</title>
+</head>
+<style>
+    .container {
+
+        padding: 5px;
+        margin: 10px;
+        border-radius: 25px;
+    }
+
+    .container-light {
+        background-color: bisque;
+        border: 1px solid brown;
+        color: brown;
+    }
+
+    .container-dark {
+        background-color: dimgray;
+        border: 1px solid black;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container container-light " id="box">
+        This is Box
+    </div>
+    <br>
+
+    <button type="button" onclick="changeTheme('dark')">Dark Mode</button>
+    <button type="button" onclick="changeTheme('light')">Dark Mode</button>
+
+    <script>
+        function changeTheme(themeName) {
+            const box = document.getElementById("box");
+           box.className = ` container container-${themeName}`;
+        }
+    </script>
+
+</body>
+
+</html>

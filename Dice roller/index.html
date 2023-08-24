@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="dice.png" alt="" id="dice" height="100px" />
+    <br> <br>
+    <button type="button" onclick="rollDice()">Roll The Dice</button>
+
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            switch (randomNumber) {
+                case 1: diceImg.src = "one.png";
+                    console.log(randomNumber);
+                    break;
+                case 2: diceImg.src = "two.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 3: diceImg.src = "three.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 4: diceImg.src = "four.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 5: diceImg.src = "five.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 6: diceImg.src = "six.png";
+
+            }
+        }
+    </script>
+</body>
+
+</html>
