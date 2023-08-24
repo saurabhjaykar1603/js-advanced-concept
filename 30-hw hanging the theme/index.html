@@ -40,13 +40,13 @@
 
         .container-dark {
             background-color: dimgray;
-            border: 1px solid black;
+            border: 1px solid rgb(179, 167, 167);
             color: white;
         }
     </style>
 </head>
 
-<body>
+<body  class="container-light " id="body">
     <div class="nav-bar-container container-light " id="box">
         <div class="left">
             <h1>ChangeTheme</h1>
@@ -55,16 +55,24 @@
 
             <h2>home</h2>
             <h2>About</h2>
-            <button type="button" onclick="changeTheme('dark')">dark</button>
-            <button type="button" onclick="changeTheme('light')">Light</button>
+            <button type="button" onclick="changeTheme('dark');changeThemeBody('dark')">dark</button>
+            <button type="button" onclick="changeTheme('light');changeThemeBody('light')">Light</button>
 
         </div>
+
     </div>
-   
+    
+
+    <p id="para" style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, blanditiis dolore corrupti maxime illo cupiditate quos repudiandae debitis id quidem adipisci minus nobis doloremque, cum molestias omnis placeat neque consectetur!</p>
+    
     <script>
+        const box = document.getElementById("box");
         function changeTheme(themeName) {
-            const box = document.getElementById("box");
-           box.className = `  container-${themeName}`;
+           box.className = `nav-bar-container  container-${themeName}`;
+        }
+        const body = document.getElementById("body");
+        function changeThemeBody(themeNameBody) {
+           body.className = `   container-${themeNameBody}`;
         }
     </script>
 </body>
