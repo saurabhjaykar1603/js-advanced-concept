@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array With Loop</title>
+  </head>
+  <style>
+    .text-center {
+      text-align: center;
+    }
+    .bg-primary {
+      background-color: #aacfff;
+    }
+
+    .student-container {
+      background-color: #674d4d;
+      padding: 5px;
+      margin: 5px;
+      border: 4px double #ccc;
+    }
+
+    .student-card {
+      border: 1px solid #ccc;
+      margin: 5px;
+      padding: 5px;
+      background-color: #0b0b05;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+  <body class="bg-primary">
+    <h1 class="text-center">Students List</h1>
+    <div class="student-container" id="students-list"></div>
+
+    <script>
+      function getRandomEmogi() {
+        const emojiList = [
+          "🐵",
+          "🐺",
+          "🐶",
+          "🐱",
+          "🐭",
+          "🐰",
+          "🦊",zzz
+          "🐻",
+          "🐼",
+          "🐨",
+          "🐯",
+          "🦁",
+        ];
+        const min = 0;
+        const max = emojiList.length;
+        const randomEmojiIndex = Math.floor(Math.random() * (max - min) + min);
+        return emojiList[randomEmojiIndex];
+      }
+
+      const emoji = getRandomEmogi();
+      console.log(emoji);
+
+      const students = [
+        "Harsh",
+        "Yogita",
+        "Sagar",
+        "Saurabh",
+        "Harshada",
+        "Tejas",
+        "Shweta",
+        "Shital",
+        "Kashish",
+        "Kartik"
+        
+      ];
+
+      const studentsList = document.getElementById("students-list");
+
+      for (let i = 0; i < students.length; i++) {
+        const emoji = getRandomEmogi();
+        studentsList.innerHTML =
+          studentsList.innerHTML +
+          `<div class="student-card"> Hello ${students[i]} ${emoji}</div>`;
+      }
+    </script>
+  </body>
+</html>
