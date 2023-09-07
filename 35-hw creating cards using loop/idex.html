@@ -1,146 +1,155 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Array With Loop</title>
     <style>
-        .text-center {
-            text-align: center;
-        }
+      .text-center {
+        text-align: center;
+      }
 
-        .bg-primary {
-            background-color: #aacfff;
-        }
+      .bg-primary {
+        background-color: #aacfff;
+      }
 
-        .student-container {
-            background-color: #674d4d;
-            padding: 10px;
-            margin: 5px;
-            border: 4px double #ccc;
-        }
+      .student-container {
+        background-color: #674d4d;
+        padding: 10px;
+        margin: 5px;
+        border: 4px double #ccc;
+      }
 
-        .student-card {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 50px;
-            background-color: #e4bc77;
-            color: rgb(1, 0, 0);
-            text-align: center;
-            border-radius: 5px;
-        }
-        .card{
-            border: 2px solid black;
-            padding: 20px;
-            box-shadow: 0 0 10px 1px rgb(15, 15, 15);
-        }
+      .student-card {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 50px;
+        background-color: #e4bc77;
+        color: rgb(1, 0, 0);
+        text-align: center;
+        border-radius: 5px;
+      }
+
+      .card {
+        border: 2px solid black;
+        padding: 20px;
+        box-shadow: 0 0 10px 1px rgb(15, 15, 15);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-primary">
+  <body class="bg-primary">
     <h1 class="text-center">Students List</h1>
     <div class="student-container" id="students-list"></div>
 
     <script>
-        // Function to get a random emoji
-        function getRandomEmoji() {
-            const emojis = ['😀', '😎', '👍', '🌟', '🎓'];
-            const randomIndex = Math.floor(Math.random() * emojis.length);
-            return emojis[randomIndex];
-        }
+      // Function to get a random emoji
+      function getRandomEmoji() {
+        const emojis = ["😀", "😎", "👍", "🌟", "🎓"];
+        const randomIndex = Math.floor(Math.random() * emojis.length);
+        return emojis[randomIndex];
+      }
 
-        const students = [
-            {
-                "name": "John Doe",
-                "age": 25,
-                "email": "john@example.com",
-                "ImageUrl": "https://example.com/john.jpg",
-                "tagline": "Living life to the fullest!"
-            },
-            {
-                "name": "Jane Smith",
-                "age": 30,
-                "email": "jane@example.com",
-                "ImageUrl": "https://example.com/jane.jpg",
-                "tagline": "Exploring the world, one step at a time."
-            },
-            {
-                "name": "Michael Johnson",
-                "age": 28,
-                "email": "michael@example.com",
-                "ImageUrl": "https://example.com/michael.jpg",
-                "tagline": "Passionate about coding and coffee."
-            },
-            {
-                "name": "Emily Davis",
-                "age": 22,
-                "email": "emily@example.com",
-                "ImageUrl": "https://example.com/emily.jpg",
-                "tagline": "Nature lover and aspiring artist."
-            },
-            {
-                "name": "Robert Brown",
-                "age": 35,
-                "email": "robert@example.com",
-                "ImageUrl": "https://example.com/robert.jpg",
-                "tagline": "Always seeking new challenges."
-            },
-            {
-                "name": "Sophia Martinez",
-                "age": 27,
-                "email": "sophia@example.com",
-                "ImageUrl": "https://example.com/sophia.jpg",
-                "tagline": "Believer in the power of kindness."
-            },
-            {
-                "name": "William Thompson",
-                "age": 29,
-                "email": "william@example.com",
-                "ImageUrl": "https://example.com/william.jpg",
-                "tagline": "Striving for a better tomorrow."
-            },
-            {
-                "name": "Olivia Wilson",
-                "age": 24,
-                "email": "olivia@example.com",
-                "ImageUrl": "https://example.com/olivia.jpg",
-                "tagline": "Making memories around the world."
-            },
-            {
-                "name": "James Harris",
-                "age": 31,
-                "email": "james@example.com",
-                "ImageUrl": "https://example.com/james.jpg",
-                "tagline": "Living with no regrets."
-            },
-            {
-                "name": "Ava Turner",
-                "age": 26,
-                "email": "ava@example.com",
-                "ImageUrl": "https://example.com/ava.jpg",
-                "tagline": "Embracing the beauty of simplicity."
-            }
-        ]
+      const students = [
+        {
+          name: "John Doe",
+          age: 25,
+          email: "john@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Living life to the fullest!",
+        },
+        {
+          name: "Jane Smith",
+          age: 30,
+          email: "jane@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Exploring the world, one step at a time.",
+        },
+        {
+          name: "Michael Johnson",
+          age: 28,
+          email: "michael@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Passionate about coding and coffee.",
+        },
+        {
+          name: "Emily Davis",
+          age: 22,
+          email: "emily@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Nature lover and aspiring artist.",
+        },
+        {
+          name: "Robert Brown",
+          age: 35,
+          email: "robert@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Always seeking new challenges.",
+        },
+        {
+          name: "Sophia Martinez",
+          age: 27,
+          email: "sophia@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg       ",
+          tagline: "Believer in the power of kindness.",
+        },
+        {
+          name: "William Thompson",
+          age: 29,
+          email: "william@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Striving for a better tomorrow.",
+        },
+        {
+          name: "Olivia Wilson",
+          age: 24,
+          email: "olivia@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Making memories around the world.",
+        },
+        {
+          name: "James Harris",
+          age: 31,
+          email: "james@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Living with no regrets.",
+        },
+        {
+          name: "Ava Turner",
+          age: 26,
+          email: "ava@example.com",
+          ImageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Outdoors-man-portrait_%28cropped%29.jpg/1200px-Outdoors-man-portrait_%28cropped%29.jpg",
+          tagline: "Embracing the beauty of simplicity.",
+        },
+      ];
 
-        const studentsList = document.getElementById("students-list");
+      const studentsList = document.getElementById("students-list");
 
-        for (let i = 0; i < students.length; i++) {
-            const student = students[i];
-            const emoji = getRandomEmoji();
-            studentsList.innerHTML += `
+      for (let i = 0; i < students.length; i++) {
+        const student = students[i];
+        const emoji = getRandomEmoji();
+        studentsList.innerHTML += `
                 <div class="student-card">
                     <div class="card">
-                        <img src="${student.imageUrl}" alt="${student.name}" />
+                    <img src="${student.ImageUrl}" alt="${student.name}" height="100px"/>
                     <h1>${student.name}</h1>
                     <p>Age: ${student.age}</p>
                     <p>Email: ${student.email}</p>
                     <p>${student.tagline}</p>
                     <p>${emoji}</p>
-                        </div>
+                    </div>
 
                    
                 </div>`;
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>
