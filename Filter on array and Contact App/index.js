@@ -25,14 +25,24 @@ const phonebook = [
   },
 ];
 
-const filteredArray = [];
+// const filteredArray = [];
 
-phonebook.forEach((contactDetails) => {
-  const { name, mobile } = contactDetails;
+// phonebook.forEach((contactDetails) => {
+//   const { name, mobile } = contactDetails;
 
-  if (name.toLowerCase().includes('a')) {
-    filteredArray.push(contactDetails);
-  }
+//   if (name.toLowerCase().includes('a')) {
+//     filteredArray.push(contactDetails);
+//   }
+// });
+
+// console.log(filteredArray);
+
+const searchTerm = 'y'
+
+const filterOutput = phonebook.filter((contactDetails) => {
+  const name = contactDetails.name.toLowerCase();
+  const mobile = contactDetails.mobile.toLowerCase();
+  return name.includes(searchTerm) || mobile.includes(searchTerm);
 });
 
-console.log(filteredArray);
+console.log(filterOutput);
